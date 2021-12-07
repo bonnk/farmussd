@@ -25,7 +25,7 @@ def ussdApp(request):
         response =""
         #  main menu for our application
         if text == '':
-            response =  "CON Murakaza neza kuri Idafarm \n"
+            response =  "CON Murakaza neza kuri food farm iwacu \n"
             response += "1. Kwandikisha igihingwa \n"
             response += "2. Kumenya ingengabihe \n"
         elif text == '1':
@@ -41,8 +41,25 @@ def ussdApp(request):
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
             response = "CON Shyiramo nimero y'irangamuntu yuwo mufatanyije \n"
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
-            response = "END Murakoze kwiyandikisha kuri Ida farm \n"
+         # save the data into databases
+          category='indimu'
+          sizeOfLand-level[1]
+          names = level[2]
+          idnumber= level[3]
+          insert = Idafarmuser(sessionId = session_id, 
+          serviceCode = service_code,
+          phoneNumber = phone_number,
+          level = level,
+          category = category,
+          sizeOfLand=sizeOfLand,
+          names=names,
+          idnumber=idnumber,
+          )
 
+          insert.save()
+
+          response = "END Murakoze kwiyandikisha kuri Ida farm \n"
+          
 
         elif text == '1*2':
             product ="Indimu"
