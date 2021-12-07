@@ -2,6 +2,8 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 import africastalking
 from django.views.decorators.csrf import csrf_exempt
+
+from ussd.models import Idafarmuser
 # Create your views here.
 def  welcome(request):
     return render(request, 'index.html')
