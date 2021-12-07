@@ -43,7 +43,7 @@ def ussdApp(request):
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
          # save the data into databases
           category='indimu'
-          sizeOfLand-level[1]
+          sizeOfLand=level[1]
           names = level[2]
           idnumber= level[3]
           insert = Idafarmuser(sessionId = session_id, 
